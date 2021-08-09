@@ -1,38 +1,38 @@
 {
-  "name"             : "sofiakb/qrcode-generator",
-  "description"      : "A library to generate QR code",
-  "type"             : "library",
-  "license"          : "MIT",
-  "autoload"         : {
-    "psr-4"   : {
-      "Sofiakb\\QRCode\\": "src/"
+    "name": "sofiakb/qrcode-generator",
+    "description": "A library to generate QR code",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Sofiakb\\QRCode\\": "src/"
+        },
+        "files": [
+            "lib/qrcode/qrlib.php"
+        ],
+        "classmap": [
+            "tests/"
+        ]
     },
-    "files"   : [
-      "lib/qrcode/qrlib.php"
+    "authors": [
+        {
+            "name": "Sofiakb",
+            "email": "contact.sofiakb@gmail.com",
+            "homepage": "https://sofianeakbly.fr",
+            "role": "Developer"
+        }
     ],
-    "classmap": [
-      "tests/"
-    ]
-  },
-  "authors"          : [
-    {
-      "name"    : "Sofiakb",
-      "email"   : "contact.sofiakb@gmail.com",
-      "homepage": "https://sofianeakbly.fr",
-      "role"    : "Developer"
-    }
-  ],
-  "support"          : {
-    "email": "contact.sofiakb@gmail.com"
-  },
-  "minimum-stability": "stable",
-  "config"           : {
-    "sort-packages"      : true,
-    "optimize-autoloader": true
-  },
-  "require-dev"      : {
-    "phpunit/phpunit": "^9.5"
-  },
-  "version"          : "v0.0.2",
-  "time"             : "2021-07-07"
+    "support": {
+        "email": "contact.sofiakb@gmail.com"
+    },
+    "minimum-stability": "stable",
+    "config": {
+        "sort-packages": true,
+        "optimize-autoloader": true
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    },
+    "version": "dev-main",
+    "time": "2021-08-09"
 }
