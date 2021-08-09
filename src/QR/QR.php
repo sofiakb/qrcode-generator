@@ -10,6 +10,7 @@
 namespace Sofiakb\QRCode\QR;
 
 
+use QRcode;
 use Sofiakb\QRCode\QRInterface;
 
 /**
@@ -56,7 +57,6 @@ class QR implements QRInterface
      */
     public function __construct(string $QRdata, string $filepath = null)
     {
-        $this->QRclass = \QRcode::class;
         $this->QRdata = ($this->prefix ? $this->prefix . ':' : '') . $QRdata;
         
         $this->filepath = $filepath;
@@ -67,7 +67,7 @@ class QR implements QRInterface
      */
     public function generate()
     {
-        $this->QRclass::png($this->QRdata, $this->filepath, QR_ECLEVEL_L, $this->size, $this->border);
+        QRcode::png($this->QRdata, $this->filepath, QR_ECLEVEL_L, $this->size, $this->border);
     }
     
     /**
@@ -120,5 +120,13 @@ class QR implements QRInterface
     public function border(int $borderSize)
     {
         $this->border = $borderSize;
+    }
+    
+    /**
+     * Clear cache.
+     */
+    public static function clear()
+    {
+        \QRtools::buildCache();
     }
 }
